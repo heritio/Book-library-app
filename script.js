@@ -10,6 +10,23 @@ let readBtn = document.querySelectorAll(".read");
 //storage Array
 var myLibrary = [];
 
+////Locale storage
+window.addEventListener("beforeunload", (e) => {
+    let myLibrarySerialized = JSON.stringify(myLibrary);
+    localStorage.setItem("storedLibrary", myLibrarySerialized);
+})
+
+window.addEventListener("load", (e) => {
+    let myLibraryDeserialized = JSON.parse(localStorage.getItem("storedLibrary"));
+    if(myLibraryDeserialized == null){
+        return;
+    }
+    myLibrary = [...myLibraryDeserialized]; 
+    displayBook();
+    
+})
+
+
 //Toggle read or not
 ////////////////////////////////////////////////////////
 container.addEventListener("click", (e) => {
@@ -67,6 +84,8 @@ function addBookToLibrary(){
     pages.textContent = "Pages: " + inputPages;
     read.textContent = "Read: " + checked;
     deletebtn.textContent = "Delete entry";
+
+  
 
     
 

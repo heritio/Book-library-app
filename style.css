@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#container{
+    width: 300px;
+    margin: auto;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.inputtab{
+    border: 1px solid grey;
+    background-color: rebeccapurple;
+    color: blanchedalmond;
+    width: 400px;
+    padding: 10px;
+    text-align: center;
+    transition: all 0.5s;   
+    margin: auto;
+    
+}
+.absolute{
+    position: absolute;
+    transform: translateY(-500px);
+    display: none;
+}
+.inputtab >*{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.inputtab > input[type="text"]{
+    height: 30px;
+    width: 70%;
+}
+.create{
+    width: 150px;
+    height: 30px;
+    margin: 10px auto;
+    display: block;
+    font-size: large;
+    background-color: rgb(243, 224, 115);
+    outline: none;
+    border-bottom: 1px solid rgb(126, 117, 117);
+    border-right: 1px solid rgb(68, 64, 64);
+}
+.cancel{
+    width: 150px;
+    height: 30px;
+    margin: 10px auto;
+    font-size: large;
+    background-color: rgb(78, 48, 78);
+    color: white;
+    outline: none;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+}
+
+/*card info*/
+.card{
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: rgb(252, 230, 210);
+
+}
+
+.title{
+    font-size: larger;
+    font-weight: 900;
+    text-decoration: underline;
+    margin: 8px 0;
+}
+.author{
+    font-size: large;
+    font-weight: 500;
+    margin: 3px 0;
+}
+
+.pages{
+    font-size: medium;
+    font-weight: 900;
+    margin: 5px 0;
+}
+
+.read{
+    width: 90px;
+    height: 30px;
+    font-size: medium;
+    margin: 3px 0;
+}
+.readyes{
+    background-color: springgreen;
+}
+.readno{
+   background-color: gray;
+}
+
+.delete{
+    width: 90px;
+    height: 30px;
+    font-size: small;
+    font-weight: 900;
+    margin: 3px 0;
+    background-color:rgb(156, 46, 6);
+    color: white;
+}
+
+
+
+.delete{
+    display: block;
+}
+/*footer*/
+.footer{
+    bottom: 0;
+    position: fixed;
+    background-color: rebeccapurple;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+.newBtn{
+    font-size: large;
+    width: 150px;
+    height: 40px;
+    background-color: sandybrown;
+    outline: none;
+}
+.newBtn:hover{
+    background-color: rgb(202, 129, 65);
+}
+
+

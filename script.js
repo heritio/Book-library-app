@@ -179,15 +179,15 @@ function displayBook(){
 
 
 //book constructor
-function Book(title,author,pages,readIt){
+class Book {
+    constructor(title,author,pages,readIt){
     this.title = title;
     this.author = author;
     this.pages = pages;
     this.read = readIt;
     
+    }
+
 }
-Book.prototype.readOrNot = function(){
- 
-  }
 
   

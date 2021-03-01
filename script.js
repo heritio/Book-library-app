@@ -50,9 +50,7 @@ container.addEventListener("click", (e) => {
 
 
  //push input to array as object
-submitBook.addEventListener("click",(e)=>{
-    addBookToLibrary;
-} );
+submitBook.addEventListener("click", addBookToLibrary);
 
 function addBookToLibrary(){
     
@@ -100,10 +98,13 @@ function addBookToLibrary(){
     card.appendChild(deletebtn);
     container.prepend(card);
 
-    inputTitle = "";
-    inputAuthor = "";
-    inputPages = "";
+    let inputTitle1 = document.querySelector("#title");
+    let inputAuthor1 = document.querySelector("#author");
+    let inputPages1 = document.querySelector("#pages");
 
+    inputTitle1.value = '';
+    inputAuthor1.value = '';
+    inputPages1.value = '';
    
     
 }
@@ -149,6 +150,15 @@ newBtn.addEventListener("click", () => {
 //cancel input
 cancelBtn.addEventListener("click", () => {
     formIn.classList.add("absolute");
+
+    let inputTitle1 = document.querySelector("#title");
+    let inputAuthor1 = document.querySelector("#author");
+    let inputPages1 = document.querySelector("#pages");
+
+    inputTitle1.value = '';
+    inputAuthor1.value = '';
+    inputPages1.value = '';
+   
 })
 
 

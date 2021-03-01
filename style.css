@@ -135,4 +135,19 @@
     background-color: rgb(202, 129, 65);
 }
 
-
+.error{
+    width: 100%;
+    display: none;
+    position: absolute;
+    margin:70px auto;
+    text-align: center;
+    background-color: aliceblue;
+    color: red;
+    font-size: 30px;
+}
+.spawn{
+    display: block;
+}
+.despawnbtn{
+    font-size: 30px;
+}

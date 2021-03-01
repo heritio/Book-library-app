@@ -50,7 +50,9 @@ container.addEventListener("click", (e) => {
 
 
  //push input to array as object
-submitBook.addEventListener("click", addBookToLibrary);
+submitBook.addEventListener("click",(e)=>{
+    addBookToLibrary;
+} );
 
 function addBookToLibrary(){
     
@@ -59,6 +61,8 @@ function addBookToLibrary(){
     let inputAuthor = document.querySelector("#author").value;
     let inputPages = document.querySelector("#pages").value;
     if(inputAuthor == "" || inputPages == "" || inputTitle == ""){
+        let ourErrorMsg = document.querySelector(".error");
+        ourErrorMsg.classList.add("spawn");
         return;
     }
     let checked = check();
@@ -96,9 +100,19 @@ function addBookToLibrary(){
     card.appendChild(deletebtn);
     container.prepend(card);
 
+    inputTitle = "";
+    inputAuthor = "";
+    inputPages = "";
+
    
     
 }
+
+let hideErrorWindow = document.querySelector(".despawnbtn")
+hideErrorWindow.addEventListener("click", (e)=> {
+    let ourErrorMsg = document.querySelector(".error");
+        ourErrorMsg.classList.remove("spawn");
+})
 
 //CHeck radio button
 function check(){
